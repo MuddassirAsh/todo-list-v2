@@ -13,8 +13,10 @@ function Input() {
     return (
         <div className='container'>
             <h1 id='title'> To-do-List </h1>
-            <input  ref={inputRef}  type="text" required /> 
-            <button onClick={addToDo}> Add </button>
+            <div className='input-container'>
+                <input  ref={inputRef}  type="text" required /> 
+                <button onClick={addToDo}> Add </button>
+            </div>
             <ul>
                 {Todos.map(todos => (
                    <li> {todos} </li>
